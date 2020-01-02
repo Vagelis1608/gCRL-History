@@ -15,6 +15,14 @@
     "11244410301401252959" : {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
+    },
+    "15346629759498347257" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "1228286566665971148" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
     }
   }
 }
