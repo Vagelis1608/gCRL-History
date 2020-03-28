@@ -23,6 +23,10 @@
     "1228286566665971148" : {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
+    },
+    "17471682139930361099" : {
+      "status": "REVOKED",
+      "reason": "SOFTWARE_FLAW"
     }
   }
 }
