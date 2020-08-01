@@ -31,6 +31,14 @@
     "e80fcf7b85d652aa": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
+    },
+    "2621004353020741590": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "1051246719628187981": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
     }
   }
 }
