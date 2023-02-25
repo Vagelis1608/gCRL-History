@@ -67,6 +67,30 @@
     "c360da616de6583ae816cdefdda66221": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
+    },
+    "1476c32be5b4788386062ca1d6a3ec01" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "c9b95f08cb46c66e778a996bb04eb063" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "1f4363f4acefdf83ae59202b934cead9" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "ee3ac673107ddf0831027a84c532bee4" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "633d72164968d2b7ec1a927a14c8efbe" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "c35747a084470c3135aeefe2b8d40cd6" : {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
     }
   }
 }
