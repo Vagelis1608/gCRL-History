@@ -1572,6 +1572,10 @@
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     },
+    "2b0a09a69c59b482ddb8a21786fdd439": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
     "5810985728898152653": {
       "status": "REVOKED",
       "reason": "SOFTWARE_FLAW"
