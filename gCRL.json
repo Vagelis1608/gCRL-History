@@ -1696,10 +1696,6 @@
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     },
-    "2b0a09a69c59b482ddb8a21786fdd439": {
-      "status": "REVOKED",
-      "reason": "KEY_COMPROMISE"
-    },
     "d11d764d395b58eab0e4254911981f6c": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
@@ -1812,10 +1808,6 @@
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     },
-    "6933392829777369721": {
-      "status": "REVOKED",
-      "reason": "KEY_COMPROMISE"
-    },
     "5871646753572800414": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
@@ -1828,10 +1820,6 @@
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     },
-    "13063048137843225758": {
-      "status": "REVOKED",
-      "reason": "KEY_COMPROMISE"
-    },
     "14138857243207454896": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
@@ -1840,27 +1828,11 @@
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     },
-    "2441400622645777626": {
-      "status": "REVOKED",
-      "reason": "KEY_COMPROMISE"
-    },
-    "2b0a09a69c59b482ddb8a21786fdd439": {
-      "status": "REVOKED",
-      "reason": "KEY_COMPROMISE"
-    },
-    "3644717209372610241": {
-      "status": "REVOKED",
-      "reason": "KEY_COMPROMISE"
-    },
     "4393895627937872466": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     },
     "4648453603379027456": {
-      "status": "REVOKED",
-      "reason": "KEY_COMPROMISE"
-    },
-    "511301ba8fd1c44c317f78dc1d7d2cd1": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     },
