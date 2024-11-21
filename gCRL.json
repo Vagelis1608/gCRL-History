@@ -1859,6 +1859,14 @@
     "da5707ca6065a48a74a1dfc1d6785e39": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
+    },
+    "d608859f730a11acc35eb186b0d25504": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "73dee6ce1a083d3cd6098e6235e8c45e": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
     }
   }
 }
