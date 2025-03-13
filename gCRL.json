@@ -1915,6 +1915,38 @@
     "8335962468401124113": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
+    },
+    "5c20653103ebb37e646b89e95e1652c6": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "862624db3944307fb99611b56689f9b6": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "f45911023fead64f9b2491ad19de06cd": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "edab094a5e001ae601c06fbce1d01a7": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "18199509147712192128": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "11410084533003518131": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "caa391f076d87177851e4acd4d99b772": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "b5d0fd3fc956f03ebb99eb10e92fa06e": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
     }
   }
 }
