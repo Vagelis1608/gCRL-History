@@ -2019,6 +2019,30 @@
     "3249146971187585601": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
+    },
+    "b1f6d91cfe4e29f034a1b9dcaf7a678a": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "6c3722823b428aef2f69497be59853f7": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "f1f9223ad2b87c8dda1b9856654593fb": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "75221ce167cc40e07cc30013f5971cae": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "10219798633894835429": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "3134375609477012285": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
     }
   }
 }
