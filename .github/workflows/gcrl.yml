@@ -1,0 +1,85 @@
+name: GCRL Tracker
+
+on:
+  schedule:
+    - cron: '2/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+        with:
+          ref: gcrl
+
+      - name: Install Latest jq
+        run: |
+          wget -q --no-check-certificate -O /usr/local/bin/jq https://github.com/jqlang/jq/releases/latest/download/jq-linux64
+          sudo chmod 755 /usr/local/bin/jq
+          jq --version
+
+      - name: Pull current CRL and compare
+        run: |
+          cd $GITHUB_WORKSPACE
+          
+          prev=0
+          prevC=0
+          update=0
+          if [[ -e "./gCRL.json" ]]; then
+            prev="$( jq -cr '.update' gCRL.json )"
+          fi
+
+          curl -s -v -o crl-test.json -H "Accept-Encoding: $( shuf -r -i 0-9 -n 9 | tr -d '\n' )" \
+              -H 'Cache-Control: no-cache, no-store, must-revalidate, max-age=0' \
+              -H 'Pragma: no-cache' -H 'If-Modified-Since: Thu, 01 Jan 1970 00:00:00 GMT' \
+              https://android.googleapis.com/attestation/status 2> ./headers.txt
+          lmDate="$( grep -i 'last-modified' ./headers.txt | tr '[:space:]' ' ' )"
+          lmDate="${lmDate#*:}"
+          lmE=$( date -d "$lmDate" +%s )
+
+          if [[ "$lmE" -gt "$prev" ]]; then
+            echo "UPDATE_EPOCH=${lmE}" >> $GITHUB_ENV
+            
+            jq --arg EP "$lmE" --arg HU "$lmDate" '. |= {"total":( .entries | length ),"updateHuman":($HU),"update":($EP)} + .' \
+                crl-test.json > new-crl.json
+            if [[ -z "$( cat new-crl.json )" ]]; then exit 1; fi
+            cp -f new-crl.json old-crl.json
+            mv -f new-crl.json gCRL.json
+          else
+            echo "UPDATE_EPOCH=0" >> $GITHUB_ENV
+          fi
+
+      - name: Commit new CRL
+        if: env.UPDATE_EPOCH > 0
+        run: |          
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+          git add gCRL.json
+          git commit -m "gCRL Update"
+          git push
+
+      - name: Discord Notification
+        if: env.UPDATE_EPOCH > 0
+        env:
+          DISCORD_WH: ${{ secrets.DISCORD_WH }}
+        run: |
+          if [[ -z "$DISCORD_WH" ]]; then exit 0; fi
+          
+          diff <(jq --sort-keys '.entries' "old-crl.json" ) <(jq --sort-keys '.entries' "gCRL.json" ) | \
+              grep '": {' | cut -d ':' -f 1 > diff.txt
+
+          echo '{"new_entries":[]}' > reasons.json
+          for cert in $( cut -d'"' -f2 < diff.txt ); do
+            jq --arg C "$cert" --argjson R "$( jq -c --arg C ${cert} '.entries.[($C)]' gCRL.json )" \
+                '."new_entries" += [{$C:$R}]' reasons.json > temp-reasons.json
+            mv -f temp-reasons.json reasons.json
+          done
+          jq '. |= {"total":( ."new_entries" | length )} + .' reasons.json > temp-reasons.json
+          mv -f temp-reasons.json reasons.json
+
+          whData="{\"content\":\"Update to G's CRL detected!\n    New entries num: $( jq -r '.total' reasons.json )\"}"
+          curl -s -X POST -o /dev/null -F "payload_json=${whData}" -F "file1=@gCRL.json" -F "file2=@diff.txt" -F "file3=@reasons.json" "$DISCORD_WH" &> /dev/null
