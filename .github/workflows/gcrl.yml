@@ -46,7 +46,7 @@ jobs:
             jq --arg EP "$lmE" --arg HU "$lmDate" '. |= {"total":( .entries | length ),"updateHuman":($HU),"update":($EP)} + .' \
                 crl-test.json > new-crl.json
             if [[ -z "$( cat new-crl.json )" ]]; then exit 1; fi
-            cp -f new-crl.json old-crl.json
+            mv -f gCRL.json old-crl.json
             mv -f new-crl.json gCRL.json
           else
             echo "UPDATE_EPOCH=0" >> $GITHUB_ENV
