@@ -40,13 +40,13 @@ jobs:
             cat ./headers.txt
           }
 
-          pullCRL()
+          pullCRL
 
           i=0
           while [[ "$( grep '< HTTP/' ./headers.txt | cut -d' ' -f3 )" -ne 200 && $i -lt 3 ]]; do
             sleep 30
             let i++
-            pullCRL()
+            pullCRL
           done
 
           if [[ $i -ge 3 ]]; then exit 1; fi
