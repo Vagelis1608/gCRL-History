@@ -4,4 +4,6 @@
 Huge thanks to @TheFreeman193 , for putting together the historical data, from before this repo started.
 
 
-<!-- GitAds-Verify: BUBN8FE13LAHXMSIC2O5VWYNCWSX4CZE -->
+
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vagelis1608/gcrl-history@github)](https://gitads.dev/v1/ad-track?source=vagelis1608/gcrl-history@github)
