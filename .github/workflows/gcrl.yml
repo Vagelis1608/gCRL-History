@@ -74,7 +74,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
 
           git add gCRL.json
-          git commit -m "gCRL Update"
+
+          echo "gCRL Update" > commit.txt
+          echo "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> commit.txt
+
+          git commit -F commit.txt
           git push
 
       - name: Discord Notification
