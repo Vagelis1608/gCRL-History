@@ -1,7 +1,7 @@
 {
-  "total": 1763,
-  "updateHuman": " Fri, 16 Oct 2026 23:38:00 GMT  ",
-  "update": "1792193880",
+  "total": 1765,
+  "updateHuman": " Wed, 21 Oct 2026 10:48:00 GMT  ",
+  "update": "1792579680",
   "entries": {
     "6681152659205225093": {
       "status": "REVOKED",
@@ -7052,6 +7052,14 @@
       "reason": "KEY_COMPROMISE"
     },
     "c6422839691e6b63145601e0c3cdb700": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "f0ce8cba91649eccb4d5dfaba10c836c": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "1c12256c52e2e0db74976ea1b0d31e09": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     }
