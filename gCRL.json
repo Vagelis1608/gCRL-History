@@ -1,7 +1,7 @@
 {
-  "total": 2222,
-  "updateHuman": " Mon, 23 Nov 2026 23:18:00 GMT  ",
-  "update": "1795475880",
+  "total": 2228,
+  "updateHuman": " Tue, 24 Nov 2026 20:18:00 GMT  ",
+  "update": "1795551480",
   "entries": {
     "1100cacd4407fb6302d6c96c1c14c004": {
       "status": "REVOKED",
@@ -8888,6 +8888,30 @@
       "reason": "KEY_COMPROMISE"
     },
     "a3a3964cec08c1adf926d0885faae913": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "55cf040288bb2ef7c8732e1e051a849e": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "48f1426c9c243058d45e29e5fed301c0": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "1879b2d14f20ac1be8f6ff9bc19840e0": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "a59fc4162e3f5031eb1268b91845cb43": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "c3344eeb739a2fe908a2d4a7ab34abb": {
+      "status": "REVOKED",
+      "reason": "KEY_COMPROMISE"
+    },
+    "4f2d9c5e3cbeac4ed57c8552ba00a9b": {
       "status": "REVOKED",
       "reason": "KEY_COMPROMISE"
     }
